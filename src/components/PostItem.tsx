@@ -4,9 +4,12 @@ import { IPost } from "../types";
 const PostItem: React.FC<{ post: IPost }> = ({ post }) => {
   return (
     <div className="flex flex-col items-start text-left max-w-[800px] mb-10 relative w-full">
-      <p className="text-2xl font-bold bg-teal-600 px-3 py-1 text-white">
+      <Link
+        to={`post/${post.id}`}
+        className="text-2xl font-bold bg-teal-600 px-3 py-1 text-white"
+      >
         {post.title}
-      </p>
+      </Link>
       <div className="text-gray-300 hover:text-red-500 hover:underline cursor-pointer text-right absolute right-0">
         Delete post
       </div>

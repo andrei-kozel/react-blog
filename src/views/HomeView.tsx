@@ -26,7 +26,7 @@ const HomeView: FC = () => {
     });
 
     return () => unsubscribe();
-  });
+  }, []);
 
   return (
     <>
